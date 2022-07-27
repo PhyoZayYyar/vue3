@@ -13,6 +13,13 @@
         <p>Name : {{name}}</p>
         <p>Sex : {{sex}}</p>
         <p>Age : {{age}}</p>
+
+        <!-- Methods and click event start-->
+        <button v-on:click="increaseAge(25)">increaseAge</button> <!--share data with round bracket-->
+        <button v-on:click="increaseAge">increaseAge</button> <!--without round bracket-->
+        <!-- if code have one statement, you can use this syntax to share data -->
+        <button v-on:click="sex='true'">change Sex</button>
+        <!-- Methods and click event end-->
     </div>
     <script src="app.js"></script>
 </body>
