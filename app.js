@@ -6,7 +6,8 @@ const app =Vue.createApp({
         return {
             name:"Phyo Si Thu Or Phyo Zay Yyar",
             sex:false,
-            age:28
+            age:28,
+            showInfo:true
         }
     },
     methods:{
