@@ -4,10 +4,30 @@ const app =Vue.createApp({
     data() {
         // data injection 
         return {
-            name:"Phyo Si Thu Or Phyo Zay Yyar",
-            sex:false,
-            age:28,
-            showInfo:true
+            people:[
+                {
+                    name:"Phyo Si Thu Or Phyo Zay Yyar",
+                    sex:false,
+                    age:28
+                },
+                {
+                    name:"Kyaw Kyaw",
+                    sex:true,
+                    age:21
+                },
+                {
+                    name:"Si Si",
+                    sex:false,
+                    age:23
+                },
+                {
+                    name:"Aye Aye",
+                    sex:false,
+                    age:20
+                }
+            ],
+            showInfo:true,
+            link:"http://www.google.com"
         }
     },
     methods:{

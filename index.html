@@ -7,22 +7,18 @@
     <!-- cdn -->
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <title>Vue</title>
-    <style>
-        .box {
-            background-color: aqua;
-            display: inline-block;
-            margin: 30px;
-            padding: 100px;
-        }
-    </style>
+    
 </head>
 <body>
     <div id="app">
         <!-- v-conditional rendering -->
         <div v-if="showInfo">
-            <p>Name : {{name}}</p>
-            <p>Sex : {{sex}}</p>
-            <p>Age : {{age}}</p>
+            <!-- v-for directive -->
+            <div v-for="person in people">
+                <p>Name : {{person.name}}</p>
+                <p>Sex : {{person.sex}}</p>
+                <p>Age : {{person.age}}</p><hr>
+            </div>
         </div>
         <!-- <button @click="showInfo=true">Show Info</button>
         <button @click="showInfo=false">Hide Info</button> -->
@@ -34,14 +30,9 @@
             <span v-if="!showInfo">show</span>
         </button>
         <br>
-        
-        <div class="box" @mouseover="mouseoverHandler($event,'data')">Mouse Over</div>
-        <div class="box" @mouseleave="mouseleaveHandler">Mouse Leave</div>
-        <div class="box" @dblclick="dblclickHandler">Double Click</div>
-        <!-- 
-        -test with default event
-        -send data
-         -->
+       
+        <!-- v-bind for attribute -->
+        <a :href="link">Google</a>
     </div>
     <script src="app.js"></script>
 </body>
