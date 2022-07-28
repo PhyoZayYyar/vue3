@@ -11,9 +11,14 @@ const app =Vue.createApp({
         }
     },
     methods:{
-        increaseAge(){
-            // alert(age)
-            this.age++
+        mouseoverHandler(event,data){
+            console.log("Mouse Over is Working!", event.type, data);
+        },
+        mouseleaveHandler(event){
+            console.log("Mouse is leaving", event.type)
+        },
+        dblclickHandler(event){
+            console.log("Doubld Click is working", event.type)
         }
     }
 });
