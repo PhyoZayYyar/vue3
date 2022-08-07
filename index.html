@@ -7,14 +7,20 @@
     <!-- cdn -->
     <script src="https://unpkg.com/vue@3.0.2"></script>
     <title>Vue</title>
-    
+    <style>
+        .fav{
+            background-color: aqua;
+        }
+    </style>
 </head>
 <body>
     <div id="app">
         <!-- v-conditional rendering -->
         <div v-if="showInfo">
             <!-- v-for directive -->
-            <div v-for="person in people">
+            <div v-for="person in people" :class="{fav:person.isFav}"> <!--add class for data bind and add favourite book-->
+                <!-- show image using v-bind for attribute -->
+                <img :src="person.image" alt="Image" width="300" height="200">
                 <p>Name : {{person.name}}</p>
                 <p>Sex : {{person.sex}}</p>
                 <p>Age : {{person.age}}</p><hr>
@@ -31,7 +37,7 @@
         </button>
         <br>
        
-        <!-- v-bind for attribute -->
+        <!-- v-bind directive for attribute -->
         <a :href="link">Google</a>
     </div>
     <script src="app.js"></script>

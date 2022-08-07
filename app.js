@@ -8,22 +8,30 @@ const app =Vue.createApp({
                 {
                     name:"Phyo Si Thu Or Phyo Zay Yyar",
                     sex:false,
-                    age:28
+                    age:28,
+                    image:'images/1.png',
+                    isFav:true
                 },
                 {
                     name:"Kyaw Kyaw",
                     sex:true,
-                    age:21
+                    age:21,
+                    image:'images/2.jpeg',
+                    isFav:false
                 },
                 {
                     name:"Si Si",
                     sex:false,
-                    age:23
+                    age:23,
+                    image:'images/3.jpeg',
+                    isFav:true
                 },
                 {
                     name:"Aye Aye",
                     sex:false,
-                    age:20
+                    age:20,
+                    image:'images/4.png',
+                    isFav:true
                 }
             ],
             showInfo:true,
