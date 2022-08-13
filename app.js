@@ -39,14 +39,17 @@ const app =Vue.createApp({
         }
     },
     methods:{
-        mouseoverHandler(event,data){
-            console.log("Mouse Over is Working!", event.type, data);
-        },
-        mouseleaveHandler(event){
-            console.log("Mouse is leaving", event.type)
-        },
-        dblclickHandler(event){
-            console.log("Doubld Click is working", event.type)
+        clickFav(person){
+            // console.log(person)
+            person.isFav = !person.isFav;
+        }
+    },
+    computed:{
+        // computed property က ကျနော်တို့ရဲ့ data နဲ့ တွဲသုံးတာပါ။ အပေါ်က data array ကို အသုံးချပြီးတော့ data ကို ထိခိုက်မရှိပဲ နောက်ထပ် data array တစ်ခုကို ဖန်တီးတာပါ။ အခုက ကျနော်တို့က ကိုကြိုက်တဲ့ person ကိုပဲ သီးသန့် ပြချင်တာပါ။
+        filterFavPerson(){
+            return this.people.filter(person=>{
+                return person.isFav===true;
+            });
         }
     }
 });

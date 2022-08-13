@@ -15,10 +15,12 @@
 </head>
 <body>
     <div id="app">
+        {{favPerson}}
         <!-- v-conditional rendering -->
         <div v-if="showInfo">
             <!-- v-for directive -->
-            <div v-for="person in people" :class="{fav:person.isFav}"> <!--add class for data bind and add favourite book-->
+            <div v-for="person in filterFavPerson" :class="{fav:person.isFav}" @click="clickFav(person)"> <!--add class for data bind and add favourite book--><!-- @click="person.isFav=!person.isFav" -->
+                
                 <!-- show image using v-bind for attribute -->
                 <img :src="person.image" alt="Image" width="300" height="200">
                 <p>Name : {{person.name}}</p>
@@ -26,19 +28,8 @@
                 <p>Age : {{person.age}}</p><hr>
             </div>
         </div>
-        <!-- <button @click="showInfo=true">Show Info</button>
-        <button @click="showInfo=false">Hide Info</button> -->
-        <!-- toggle button -->
-        <!-- <button @click="showInfo=!showInfo">toggle info
-        </button> -->
-        <button @click="showInfo=!showInfo">
-            <span v-if="showInfo">hide</span>
-            <span v-if="!showInfo">show</span>
-        </button>
-        <br>
+      
        
-        <!-- v-bind directive for attribute -->
-        <a :href="link">Google</a>
     </div>
     <script src="app.js"></script>
 </body>
